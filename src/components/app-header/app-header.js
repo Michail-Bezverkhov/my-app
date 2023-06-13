@@ -9,13 +9,14 @@ const Header = styled.div`
         font-size: 26px;
         color: ${props => props.colored ? 'red' : 'black'};
         &:hover {
-            color: blue;
+            cursor: default;
         }
     }
 
     h2 {
         font-size: 1.2rem;
         color: grey;
+        cursor: default;
     }
 `
 

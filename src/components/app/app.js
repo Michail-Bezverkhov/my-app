@@ -20,7 +20,7 @@ export default class App extends Component {
         super(props);
         this.state = {
             data: [
-                { label: 'Going to learn React', important: true, like: false, id: 1 },
+                { label: 'Going to learn React', important: true, like: true, id: 1 },
                 { label: 'That is so good', important: false, like: false, id: 2 },
                 { label: 'I need a break...', important: false, like: false, id: 3 }
             ],
@@ -101,8 +101,10 @@ export default class App extends Component {
             return items
         }
 
+        const regex = new RegExp(term, 'i');
+
         return items.filter( (item) => {
-            return item.label.indexOf(term) > -1
+            return regex.test(item.label);
         })
     }
 
